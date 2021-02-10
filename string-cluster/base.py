@@ -1,4 +1,3 @@
-from typing import Union, Optional
 import re
 import pandas as pd
 import numpy as np
@@ -7,7 +6,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 
-Vector = Union[pd.Series, np.ndarray]
 STOP_TOKENS = '[\W_]+|(corporation)|(corp)|(incorporated)|(inc)|(company)|(common)|(com)'
 
 
@@ -61,3 +59,7 @@ def test_small():
     labs = c.fit_transform(series)
     res = pd.DataFrame({'actual': series, 'label': labs})
     return res
+
+
+if __name__ == '__main__':
+    print(test_small())
