@@ -10,6 +10,7 @@ EMAIL = 'cjsantiago@gatech.edu'
 
 HERE = pathlib.Path(__file__).absolute().parent
 INSTALL_REQUIRES = HERE.joinpath('requirements.txt').read_text().split('\n')
+LICENSE = HERE.joinpath('license.txt').read_text()
 
 
 def install_package():
